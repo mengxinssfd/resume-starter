@@ -9,7 +9,7 @@ const data: Data = {
     from: '广州',
     job: '前端工程师',
     education: '本科',
-    graduatedSchool: 'xx大学 · xx专业(2015 - 2018)',
+    graduatedSchool: 'xx大学 · xx专业(2014 - 2018)',
     workAt: new Date(2018, 1),
     // avatar,
   },
