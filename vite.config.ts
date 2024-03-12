@@ -3,14 +3,16 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import { exec } from 'child_process';
 import { formatDate } from '@tool-pack/basic';
+import pkg from './package.json';
 
 /**
  * Vite configuration
  * https://vitejs.dev/config/
  */
-export default defineConfig(async () => {
+export default defineConfig(async (env) => {
   const lastModified = await getLatestCommitTime('2024-03-12 00:00:00');
   return {
+    base: env.mode === 'development' ? undefined : pkg.name,
     cacheDir: `./.cache`,
     plugins: [
       // https://github.com/vitejs/vite/tree/main/packages/plugin-react
