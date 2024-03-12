@@ -32,7 +32,7 @@
     "web-vitals": "^3.5.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.0.3",
+    "@commitlint/cli": "^19.1.0",
     "@commitlint/config-conventional": "^19.0.3",
     "@testing-library/react": "^14.2.1",
     "@tool-pack/basic": "^0.7.0",
