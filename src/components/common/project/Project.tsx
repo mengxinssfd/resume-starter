@@ -42,11 +42,11 @@ export const Project: FC<{ project: ProjectType }> = ({
         )}
         <div className="project-desc item-bd pre-line">
           <div className="label">情景(Situation):</div>
-          <ol className="content">{project.situation}</ol>
+          <div className="content">{project.situation}</div>
         </div>
         <div className="project-desc item-bd pre-line">
           <div className="label">任务(Task):</div>
-          <ol className="content">{project.task}</ol>
+          <div className="content">{project.task}</div>
         </div>
         <div className="project-desc item-bd pre-line">
           <div className="label">行动(Action):</div>
