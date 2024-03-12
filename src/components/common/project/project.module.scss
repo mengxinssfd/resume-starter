@@ -1,0 +1,32 @@
+.root {
+  :global {
+    .label {
+      font-weight: bold;
+    }
+    .content {
+      margin-left: 16px;
+      color: #333333;
+    }
+    ol.content {
+      margin-left: 30px;
+    }
+    .project-name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .technology-stack {
+      display: flex;
+      .content {
+        flex: 1;
+      }
+    }
+    .item-bd {
+      margin-top: 6px;
+    }
+    .project-desc {
+      ol {
+        list-style: decimal;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.root {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  color: #bbb;
+  :global {
+    .generate-pdf,
+    .last-modified {
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+}

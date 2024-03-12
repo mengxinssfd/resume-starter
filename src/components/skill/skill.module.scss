@@ -1,0 +1,10 @@
+.root {
+  :global {
+    ul {
+      padding: 0 16px;
+      li {
+        list-style: square;
+      }
+    }
+  }
+}

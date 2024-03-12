@@ -1,0 +1,25 @@
+.root {
+  :global {
+    .project-list .project {
+      display: flex;
+      gap: 3px;
+      @media screen and (max-width: 1024px) {
+        display: block;
+        > a {
+          display: block;
+        }
+      }
+    }
+    .project-name {
+      font-weight: bold;
+    }
+    .project-desc,
+    .tips {
+      color: #565555;
+    }
+    .tips {
+      text-align: right;
+      font-size: 12px;
+    }
+  }
+}

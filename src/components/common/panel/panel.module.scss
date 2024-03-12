@@ -1,0 +1,38 @@
+.root {
+  :global {
+    .panel-header {
+      position: relative;
+      height: 32px;
+      margin: 12px 0;
+      overflow: hidden;
+    }
+    .panel-title {
+      z-index: 1;
+      width: 24%;
+      min-width: 100px;
+      margin: 0 auto;
+      padding: 4px 10px;
+      border-radius: 32px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      background-color: var(--panel-border-color);
+      &:before,
+      &:after {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        display: inline-block;
+        width: 35%;
+        height: 0;
+        vertical-align: middle;
+        border-top: 1px solid var(--panel-border-color);
+        content: '';
+      }
+      &:after {
+        left: unset;
+        right: 0;
+      }
+    }
+  }
+}

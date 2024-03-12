@@ -4,6 +4,7 @@ specifiers:
   '@commitlint/cli': ^19.0.3
   '@commitlint/config-conventional': ^19.0.3
   '@testing-library/react': ^14.2.1
+  '@tool-pack/basic': ^0.7.0
   '@types/jest': ^29.5.12
   '@types/node': ^20.11.25
   '@types/react': ^18.2.64
@@ -36,6 +37,7 @@ devDependencies:
   '@commitlint/cli': 19.0.3_jpto7fu6oxb7sjo4unuhtwil34
   '@commitlint/config-conventional': 19.0.3
   '@testing-library/react': 14.2.1_biqbaboplfbrettd7655fr4n2y
+  '@tool-pack/basic': 0.7.0
   '@types/jest': 29.5.12
   '@types/node': 20.11.25
   '@types/react': 18.2.64
@@ -4013,6 +4015,22 @@ packages:
       '@types/react-dom': 18.2.21
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+    dev: true
+
+  /@tool-pack/basic/0.7.0:
+    resolution:
+      {
+        integrity: sha512-aT5bPSYJQ2tQSrQBO/C/q0nwwd/Svvol8ngcxUxuXsLHggozJU0h+UWQ6tftcX7WnXbSEpkQsTj/Kotu+H9pvw==,
+      }
+    dependencies:
+      '@tool-pack/types': 0.0.6
+    dev: true
+
+  /@tool-pack/types/0.0.6:
+    resolution:
+      {
+        integrity: sha512-V2puQW1R2ufXhhHtGy7v5Kt/ulwfpEc87NK8iADwySU058oebY7gv+SdgehgTmbf6H2odqilcH5DeY8Acmhaww==,
+      }
     dev: true
 
   /@tootallnate/once/1.1.2:

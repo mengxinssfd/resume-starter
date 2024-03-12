@@ -1,0 +1,35 @@
+.root {
+  :global {
+    .header {
+      padding: 5px 0 5px;
+      min-height: 30px;
+    }
+    .body {
+      margin-bottom: 5px;
+    }
+    .name {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .line {
+      margin: 0 5px;
+    }
+    .time {
+      //float: right;
+      margin-left: 10px;
+      font-size: 14px;
+      color: #606060;
+    }
+    .desc {
+      color: #565555;
+    }
+    .duty {
+      ul {
+        margin-left: 20px;
+        li {
+          list-style: disc;
+        }
+      }
+    }
+  }
+}
