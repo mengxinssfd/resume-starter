@@ -23,8 +23,8 @@ export const GitHub: FC = (): ReactNode => {
           {link}
         </a>
       </div>
-      <img src={statistics} alt="statistics" />
-      <img src={lang} alt="lang" />
+      <img src={statistics} loading="lazy" alt="statistics" />
+      <img src={lang} loading="lazy" alt="lang" />
     </Panel>
   );
 };
