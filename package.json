@@ -2,6 +2,7 @@
   "name": "react-starter",
   "version": "0.0.1",
   "private": true,
+  "packageManager": "pnpm@7.1.0",
   "scripts": {
     "start": "vite serve --port 8080",
     "build": "vite build",
