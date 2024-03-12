@@ -44,7 +44,7 @@ a {
 }
 .print-hidden {
   @media print {
-    display: none;
+    display: none !important;
   }
 }
 
