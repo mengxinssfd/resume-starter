@@ -51,6 +51,8 @@ export default defineConfig(async (env) => {
           return;
         }
         const commitTime = new Date(stdout.trim());
+        const offset = commitTime.getTimezoneOffset() / 60 + 8;
+        commitTime.setHours(commitTime.getHours() + offset);
         resolve(formatDate(commitTime));
       });
     });
