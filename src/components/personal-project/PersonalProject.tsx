@@ -15,15 +15,15 @@ export const PersonalProject: FC = (): ReactElement => {
         {projects.map((project, i) => {
           return (
             <li key={i} className="project">
-              <strong className="project-name">《{project.name}》</strong>
-              <span className="project-desc">{project.desc}</span>
-              {project.link?.split(';').map((link) => {
-                return (
-                  <a key={link} href={link} target="_blank" rel="noreferrer">
-                    {link}
-                  </a>
-                );
-              })}
+              <strong className="name">《{project.name}》</strong>
+              <span className="desc">{project.desc}</span>
+              <a
+                className="link"
+                href={project.link}
+                target="_blank"
+                rel="noreferrer">
+                {project.link}
+              </a>
             </li>
           );
         })}

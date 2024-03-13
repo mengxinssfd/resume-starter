@@ -1,21 +1,24 @@
 .root {
   :global {
-    .project-list .project {
+    .project {
       display: flex;
       gap: 3px;
       @media screen and (max-width: 1024px) {
         display: block;
-        > a {
-          display: block;
-        }
       }
     }
-    .project-name {
+    .link {
+      margin-left: 3px;
+      @media screen and (max-width: 1024px) {
+        display: block;
+      }
+    }
+    .name {
       font-weight: bold;
     }
-    .project-desc,
+    .desc,
     .tips {
-      color: #565555;
+      color: var(--text-color-2);
     }
     .tips {
       text-align: right;

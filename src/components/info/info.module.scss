@@ -5,15 +5,14 @@
     position: relative;
     width: 100%;
     padding: 20px 30px;
-    color: #fff;
+    color: var(--text-color-10);
     background-color: var(--theme-color);
     overflow: hidden;
-
     @media screen and (max-width: 720px) {
       padding: 25px 30px;
     }
     @media print {
-      color: #000;
+      color: var(--text-color);
       background-color: #fff;
     }
     .hd-left {
@@ -111,15 +110,12 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            color: #fff;
-            @media print {
-              color: #000;
-            }
+            color: inherit;
             font-family: 'Lucida Grande', 'Hiragino Sans GB',
               'Hiragino Sans GB W3', var(--font-family);
             line-height: 22px;
             &:hover {
-              color: #e8e8e8;
+              color: var(--text-color-9);
             }
             .contact-link {
               @media screen and (max-width: 720px) {
@@ -128,7 +124,7 @@
             }
             .iconfont {
               margin-left: 6px;
-              fill: #fff;
+              fill: currentColor;
               vertical-align: text-top;
               @media screen and (max-width: 720px) {
                 margin: 5px 8px;

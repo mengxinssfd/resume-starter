@@ -16,7 +16,7 @@
       font-size: 16px;
       font-weight: bold;
       text-align: center;
-      background-color: var(--panel-border-color);
+      background-color: var(--border-color);
       &:before,
       &:after {
         position: absolute;
@@ -26,7 +26,7 @@
         width: 35%;
         height: 0;
         vertical-align: middle;
-        border-top: 1px solid var(--panel-border-color);
+        border-top: 1px solid var(--border-color);
         content: '';
       }
       &:after {

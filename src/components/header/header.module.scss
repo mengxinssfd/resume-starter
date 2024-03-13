@@ -2,7 +2,7 @@
   display: flex;
   align-content: center;
   justify-content: space-between;
-  color: #bbb;
+  color: var(--text-color-5);
   :global {
     .generate-pdf,
     .last-modified {

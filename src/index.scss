@@ -1,8 +1,18 @@
+@use 'sass:color' as Col;
+
+// 生成色阶 css 变量
+@mixin colorScale($name, $color, $step: 25%, $len: 5) {
+  --#{$name}: #{$color};
+  // 亮度逐级提升
+  @for $i from 2 through $len {
+    --#{$name}-#{$i}: #{Col.scale($color, $lightness: calc($step * ($i - 1)))};
+  }
+}
+
 :root {
-  --theme-color: #00b38a;
-  --panel-border-color: #ededed;
-  --border-color: #cccccc;
-  --text-color: #d1d1d1;
+  @include colorScale(theme-color, #00b38a, $step: 10%);
+  @include colorScale(text-color, #333, calc(1 / 9 * 100%), 10);
+  --border-color: var(--text-color-9);
   --font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft YaHei',
     sans-serif;
 }
@@ -13,17 +23,20 @@ li {
   margin: 6px 0;
 }
 body {
-  color: #333;
+  color: var(--text-color);
   font-size: 16px;
   line-height: 1.5;
   font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
-  background-color: #eee;
+  background-color: var(--text-color-9);
   overflow: auto;
   padding-top: 5px;
   @media screen and (max-width: 1024px) {
     padding-top: 0;
+  }
+  @media print {
+    background-color: white;
   }
 }
 #root {
@@ -33,6 +46,9 @@ body {
     width: 100%;
     margin: 0;
   }
+  @media print {
+    margin: 0;
+  }
 }
 .pre-line {
   white-space: pre-line;
@@ -40,7 +56,13 @@ body {
 a {
   text-decoration: none;
   color: var(--theme-color);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s;
+  &:hover {
+    color: var(--theme-color-3);
+  }
+  @media print {
+    color: inherit;
+  }
 }
 .print-hidden {
   @media print {
@@ -78,8 +100,9 @@ article {
   font-family: Menlo, var(--font-family);
   font-size: inherit;
   cursor: pointer;
+  background: none;
   transition: all 0.2s;
   &:hover {
-    transform: translateY(-2px);
+    color: var(--theme-color-3);
   }
 }

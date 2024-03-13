@@ -15,13 +15,12 @@
       margin: 0 5px;
     }
     .time {
-      //float: right;
       margin-left: 10px;
       font-size: 14px;
-      color: #606060;
+      color: var(--text-color-3);
     }
     .desc {
-      color: #565555;
+      color: var(--text-color-3);
     }
     .duty {
       ul {
