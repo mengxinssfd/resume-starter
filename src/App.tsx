@@ -1,4 +1,3 @@
-import style from './app.module.scss';
 import {
   Header,
   Info,
@@ -19,17 +18,17 @@ const App: FC = (): ReactElement => {
   return (
     <>
       <Header />
-      <main className={style.app}>
+      <article>
         {visible.info && <Info />}
-        <article className="box">
+        <section className="body">
           {visible.skill && <Skill />}
           {visible.workExperience && <WorkExperience />}
           {visible.projectExperience && <ProjectExperience />}
           {visible.github && <GitHub />}
           {visible.personalProject && <PersonalProject />}
           {visible.evaluation && <Evaluation />}
-        </article>
-      </main>
+        </section>
+      </article>
       <Footer />
     </>
   );
