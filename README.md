@@ -2,7 +2,9 @@
 
 简历模板
 
-# 预览图
+# 预览
+
+[在线预览](https://mengxinssfd.github.io/resume-starter/)
 
 ## 网页预览
 
