@@ -31,6 +31,7 @@ ps：pdf 是没有黑边的，截图的时候不小心截到了，懒得换了
 
 1. clone 该项目
 2. 运行 `pnpm install` 安装依赖
-3. 运行 `npm run start` 启动项目
+3. 打开 [src/data.ts](./src/data.ts) 文件，在文件内按需填写自己的信息
+4. 运行 `npm run start` 启动项目
    - 点击页面左上角的 `生成PDF` 按钮可生成 PDF 文件
-4. 运行 `npm run build` 打包项目
+5. 运行 `npm run build` 打包项目
