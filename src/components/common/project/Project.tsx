@@ -34,6 +34,10 @@ export const Project: FC<{ project: ProjectType }> = ({
             </span>
           </div>
         )}
+        <div className="project-desc item-bd pre-line">
+          <span className="label">项目描述:</span>
+          <span className="content">{project.desc}</span>
+        </div>
         {project.technologyStack && (
           <div className="technology-stack item-bd">
             <span className="label">技术栈:</span>
@@ -41,23 +45,7 @@ export const Project: FC<{ project: ProjectType }> = ({
           </div>
         )}
         <div className="project-desc item-bd pre-line">
-          <div className="label">情景(Situation):</div>
-          <div className="content">{project.situation}</div>
-        </div>
-        <div className="project-desc item-bd pre-line">
-          <div className="label">任务(Task):</div>
-          <div className="content">{project.task}</div>
-        </div>
-        <div className="project-desc item-bd pre-line">
-          <div className="label">行动(Action):</div>
-          <ol className="content">
-            {project.action.map((desc, index) => {
-              return <li key={index}>{desc}</li>;
-            })}
-          </ol>
-        </div>
-        <div className="project-desc item-bd pre-line">
-          <div className="label">结果(Result):</div>
+          <div className="label">行动与结果:</div>
           <ol className="content">
             {project.result.map((desc, index) => {
               return <li key={index}>{desc}</li>;

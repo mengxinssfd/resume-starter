@@ -51,40 +51,32 @@ export interface Contact {
   blog?: string;
 }
 
-export interface Project {
+export interface PersonalProject {
   /**
    * 项目名称
    */
   name: string;
   /**
+   * 项目描述
+   */
+  desc: string;
+  /**
    * 项目链接
    */
   link?: string;
+}
+
+export interface Project extends PersonalProject {
   /**
    * 技术栈
    */
   technologyStack?: string;
-
   /**
    * 项目所花费的时间
    */
   time?: [start: string, end: string];
-
-  // STAR 法则
   /**
-   * 情景
-   */
-  situation: string;
-  /**
-   * 任务
-   */
-  task: string;
-  /**
-   * 行动
-   */
-  action: string[];
-  /**
-   * 结果
+   * 行动与结果
    */
   result: string[];
 }
@@ -110,12 +102,6 @@ export interface Company {
    * 职责和成就
    */
   duty: string[];
-}
-
-export interface PersonalProject {
-  name: string;
-  desc: string;
-  link: string;
 }
 
 export interface Data {
