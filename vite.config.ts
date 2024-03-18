@@ -32,7 +32,7 @@ export default defineConfig(async (env) => {
     },
     // 环境变量配置
     define: {
-      'process.env': { lastModified },
+      'import.meta.env.APP_LAST_MODIFIED': JSON.stringify(lastModified),
       'import.meta.env.APP_TITLE': JSON.stringify(
         `${data.info.name} - ${data.info.job}简历`,
       ),
