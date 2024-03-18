@@ -4,6 +4,7 @@ import { resolve } from 'path';
 import { exec } from 'child_process';
 import { formatDate } from '@tool-pack/basic';
 import pkg from './package.json';
+import data from './src/data';
 
 /**
  * Vite configuration
@@ -11,8 +12,9 @@ import pkg from './package.json';
  */
 export default defineConfig(async (env) => {
   const lastModified = await getLatestCommitTime('2024-03-12 00:00:00');
+  const isDev = env.mode === 'development';
   return {
-    base: env.mode === 'development' ? undefined : pkg.name,
+    base: isDev ? undefined : pkg.name,
     cacheDir: `./.cache`,
     plugins: [
       // https://github.com/vitejs/vite/tree/main/packages/plugin-react
@@ -31,6 +33,12 @@ export default defineConfig(async (env) => {
     // 环境变量配置
     define: {
       'process.env': { lastModified },
+      'import.meta.env.APP_TITLE': JSON.stringify(
+        `${data.info.name} - ${data.info.job}简历`,
+      ),
+      'import.meta.env.APP_ENTRY': JSON.stringify(
+        isDev ? 'src/index.dev.tsx' : 'src/index.tsx',
+      ),
     },
   };
 
