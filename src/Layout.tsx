@@ -14,7 +14,7 @@ import type { FC, ReactElement } from 'react';
 
 const { visible } = Settings;
 
-const App: FC = (): ReactElement => {
+const Layout: FC = (): ReactElement => {
   return (
     <>
       <Header />
@@ -34,4 +34,4 @@ const App: FC = (): ReactElement => {
   );
 };
 
-export default App;
+export default Layout;
