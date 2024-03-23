@@ -8,20 +8,24 @@ import {
   PersonalProject,
   Evaluation,
   Footer,
+  PersonalAdvantage,
 } from '@/components';
 import { Settings } from '@/settings';
 import type { FC, ReactElement } from 'react';
+import data from '@/data';
+import { DataContext } from './context';
 
 const { visible } = Settings;
 
 const Layout: FC = (): ReactElement => {
   return (
-    <>
+    <DataContext.Provider value={data}>
       <Header />
       <article>
         {visible.info && <Info />}
         <section className="body">
           {visible.skill && <Skill />}
+          {visible.personalAdvantage && <PersonalAdvantage />}
           {visible.workExperience && <WorkExperience />}
           {visible.projectExperience && <ProjectExperience />}
           {visible.github && <GitHub />}
@@ -30,7 +34,7 @@ const Layout: FC = (): ReactElement => {
         </section>
       </article>
       <Footer />
-    </>
+    </DataContext.Provider>
   );
 };
 

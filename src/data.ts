@@ -32,6 +32,11 @@ const data: Data = {
     '熟悉 WebAssembly',
     '熟悉 ThreeJs',
   ],
+  personalAdvantage: [
+    '**熟悉 React、Vue，有一定项目架构经验**',
+    '熟悉工程化，有生产和开发环境优化经验',
+    '懂一点 Nodejs，有丰富实战经验',
+  ],
   // 工作经历
   workExperience: [
     {

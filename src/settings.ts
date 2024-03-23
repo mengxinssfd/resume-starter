@@ -7,5 +7,6 @@ export const Settings = {
     github: true,
     personalProject: true,
     evaluation: true,
+    personalAdvantage: true,
   },
 };

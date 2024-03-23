@@ -6,3 +6,4 @@ export * from './github';
 export * from './personal-project';
 export * from './evaluation';
 export * from './footer';
+export * from './personal-advantage';
