@@ -35,8 +35,8 @@ export const PersonalProject: FC = (): ReactElement => {
           更多项目请移步本人{' '}
           <a href={link} target="__blank">
             GitHub
-          </a>
-          。
+          </a>{' '}
+          查看 。
         </div>
       )}
     </Panel>
