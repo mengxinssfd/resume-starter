@@ -7,8 +7,12 @@
     .body {
       margin-bottom: 5px;
     }
+    .work-list {
+      > li + li {
+        margin-top: 20px;
+      }
+    }
     .name {
-      font-weight: bold;
       font-size: 18px;
     }
     .line {
@@ -24,10 +28,7 @@
     }
     .duty {
       ul {
-        margin-left: 20px;
-        li {
-          list-style: disc;
-        }
+        //margin-left: 20px;
       }
     }
   }

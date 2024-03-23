@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import 'resetcss';
 import './index.scss';
 import { DataContext } from '@/context';
 import data from '@/data';

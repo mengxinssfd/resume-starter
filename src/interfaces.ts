@@ -70,7 +70,7 @@ export interface Project extends PersonalProject {
   /**
    * 技术栈
    */
-  technologyStack?: string;
+  technologyStack?: string[];
   /**
    * 项目所花费的时间
    */

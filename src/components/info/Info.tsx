@@ -63,7 +63,7 @@ export const Info: FC = (): ReactElement => {
           </div>
         </section>
         <section className="info">
-          <ul>
+          <ul className="clear-list-style">
             <li>
               {info.gender} / {info.from}
             </li>
@@ -74,7 +74,7 @@ export const Info: FC = (): ReactElement => {
           </ul>
         </section>
         <section className="contact">
-          <ul>
+          <ul className="clear-list-style">
             {contactQueue.map((k) => {
               const { value, link, icon } = contactObj[k];
               return (

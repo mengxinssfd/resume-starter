@@ -14,16 +14,18 @@ export const PersonalProject: FC = (): ReactElement => {
       <ul className="project-list">
         {projects.map((project, i) => {
           return (
-            <li key={i} className="project">
-              <strong className="name">《{project.name}》</strong>
-              <span className="desc">{project.desc}</span>
-              <a
-                className="link"
-                href={project.link}
-                target="_blank"
-                rel="noreferrer">
-                {project.link}
-              </a>
+            <li key={i}>
+              <div className="project">
+                <strong className="name">《{project.name}》</strong>
+                <span className="desc">{project.desc}</span>
+                <a
+                  className="link"
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer">
+                  {project.link}
+                </a>
+              </div>
             </li>
           );
         })}

@@ -11,7 +11,7 @@ export const ProjectExperience: FC = (): ReactElement => {
       <ul className={style['project-list']}>
         {projects.map((project, i) => {
           return (
-            <li key={i} className={style.project}>
+            <li key={i}>
               <Project project={project} />
             </li>
           );

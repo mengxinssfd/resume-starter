@@ -2,6 +2,7 @@ import style from './project.module.scss';
 import type { FC, ReactElement } from 'react';
 import type { Project as ProjectType } from '@/interfaces';
 import { getClassNames } from '@tool-pack/basic';
+import { List, MarkdownViewer } from '@/components/common';
 
 export const Project: FC<{ project: ProjectType }> = ({
   project,
@@ -10,16 +11,16 @@ export const Project: FC<{ project: ProjectType }> = ({
     <section className={getClassNames('pre-line', style.root)}>
       <div className="item">
         <div className="item-bd">
-          <strong className="project-name">《{project.name}》</strong>
+          <strong className="project-name">{project.name}</strong>
+          {project.time && (
+            <>
+              <span> - </span>
+              <span className="time">({project.time.join(' - ')})</span>
+            </>
+          )}
         </div>
       </div>
       <div className="item">
-        {project.time && (
-          <div className="item-bd">
-            <span className="label">时间:</span>
-            <span className="content">{project.time.join(' - ')}</span>
-          </div>
-        )}
         {project.link && (
           <div className="item-bd">
             <span className="label">链接:</span>
@@ -34,23 +35,25 @@ export const Project: FC<{ project: ProjectType }> = ({
             </span>
           </div>
         )}
-        <div className="project-desc item-bd pre-line">
-          <span className="label">项目描述:</span>
-          <span className="content">{project.desc}</span>
+        <div className="desc item-bd pre-line">
+          <span className="label">描述:</span>
+          <MarkdownViewer
+            tag="span"
+            className="content"
+            content={project.desc}
+          />
         </div>
         {project.technologyStack && (
           <div className="technology-stack item-bd">
             <span className="label">技术栈:</span>
-            <span className="content">{project.technologyStack}</span>
+            <span className="content">
+              {project.technologyStack.join(' + ')}
+            </span>
           </div>
         )}
-        <div className="project-desc item-bd pre-line">
-          <div className="label">行动与结果:</div>
-          <ol className="content">
-            {project.result.map((desc, index) => {
-              return <li key={index}>{desc}</li>;
-            })}
-          </ol>
+        <div className="result item-bd pre-line">
+          <div className="label">成果:</div>
+          <List tag="ol" className="content" list={project.result} />
         </div>
       </div>
     </section>

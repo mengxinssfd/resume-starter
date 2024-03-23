@@ -7,6 +7,7 @@ export const Footer: FC = (): ReactElement => {
     <footer className={getClassNames('print-hidden', style.root)}>
       <a
         className="footer-link"
+        target="_blank"
         href="https://github.com/mengxinssfd/resume-starter">
         Host On Github
       </a>

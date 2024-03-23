@@ -30,7 +30,7 @@
     .title {
       width: 100%;
       border-bottom: 2px solid var(--border-color);
-      font-size: 52px;
+      font-size: var(--font-size-title);
       font-weight: 300;
       overflow: hidden;
       padding-bottom: 5px;
@@ -80,7 +80,7 @@
       }
       h2 {
         display: inline-block;
-        font-size: 24px;
+        font-size: var(--font-size-title-light);
         @media screen and (max-width: 720px) {
           border-top: 1px solid var(--border-color);
           margin: 5px auto 0;
