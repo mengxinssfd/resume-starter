@@ -6,6 +6,8 @@ import { formatDate } from '@tool-pack/basic';
 import pkg from './package.json';
 import data from './src/data';
 
+const strf = JSON.stringify;
+
 /**
  * Vite configuration
  * https://vitejs.dev/config/
@@ -32,11 +34,12 @@ export default defineConfig(async (env) => {
     },
     // 环境变量配置
     define: {
-      'import.meta.env.APP_LAST_MODIFIED': JSON.stringify(lastModified),
-      'import.meta.env.APP_TITLE': JSON.stringify(
+      'import.meta.env.APP_LAST_MODIFIED': strf(lastModified),
+      'import.meta.env.APP_AUTHOR': strf(pkg.author),
+      'import.meta.env.APP_TITLE': strf(
         `${data.info.name} - ${data.info.job}简历`,
       ),
-      'import.meta.env.APP_ENTRY': JSON.stringify(
+      'import.meta.env.APP_ENTRY': strf(
         isDev ? 'src/index.dev.tsx' : 'src/index.tsx',
       ),
     },
