@@ -20,7 +20,9 @@ export const WorkExperience: FC = (): ReactElement => {
                   <span className="time">({company.time.join(' - ')})</span>
                 </h3>
                 <div className="body">
-                  <MarkdownViewer className="desc" content={company.desc} />
+                  {company.desc && (
+                    <MarkdownViewer className="desc" content={company.desc} />
+                  )}
                   <div className="duty">
                     <List tag="ul" list={company.duty} />
                   </div>

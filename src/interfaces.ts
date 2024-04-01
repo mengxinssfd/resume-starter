@@ -97,7 +97,7 @@ export interface Company {
   /**
    * 公司描述
    */
-  desc: string;
+  desc?: string;
   /**
    * 职责和成就
    */
