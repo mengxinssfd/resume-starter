@@ -14,7 +14,7 @@ export const Project: FC<{ project: ProjectType }> = ({
           <strong className="project-name">{project.name}</strong>
           {project.time && (
             <>
-              <span> - </span>
+              <span className="line"> - </span>
               <span className="time">({project.time.join(' - ')})</span>
             </>
           )}
