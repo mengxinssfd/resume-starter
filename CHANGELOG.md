@@ -1,3 +1,9 @@
+## [0.0.2](https://github.com/mengxinssfd/resume-starter/compare/v0.0.1...v0.0.2) (2024-04-02)
+
+### Bug Fixes
+
+- 修复打包为组件后更新时间拿不到的问题 ([6038945](https://github.com/mengxinssfd/resume-starter/commit/6038945534715fd6084ea4cda70175367ca6b549))
+
 ## [0.0.1](https://github.com/mengxinssfd/resume-starter/compare/v0.0.1-beta.0...v0.0.1) (2024-04-02)
 
 # 0.0.0 (2024-04-02)
