@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "declaration": true,
+    "target": "es2019",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -16,8 +14,6 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "types": ["vite/client"],
-    "outDir": "./temp/types",
-    "declarationDir": "./temp/types",
     "paths": {
       "@/*": ["./src/*"]
     }

@@ -34,7 +34,7 @@ export default defineConfig((): UserConfig => {
     plugins: [
       // https://github.com/vitejs/vite/tree/main/packages/plugin-react
       react({
-        jsxRuntime: 'classic',
+        jsxRuntime: 'automatic',
       }),
     ],
     cacheDir: `./.cache`,

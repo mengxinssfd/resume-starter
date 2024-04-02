@@ -78,6 +78,13 @@ const actions = {
   },
   genChangeLog: () => exec(npmTool, ['changelog']),
   lintCheck: () => exec(npmTool, ['check:all']),
+  updatePkg: (config: Config) => {
+    rootPkgJson.version = config.targetVersion;
+    fs.writeFileSync(
+      path.resolve(rootDir, 'package.json'),
+      JSON.stringify(rootPkgJson, null, 2),
+    );
+  },
 };
 
 interface Config {
@@ -192,6 +199,10 @@ async function setup() {
   } else {
     console.log(`(skipped)`);
   }
+
+  // update package.json
+  step('\nUpdate package.json...');
+  actions.updatePkg(config);
 
   // generate changelog
   step('\nGenerating changelog...');

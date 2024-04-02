@@ -5,8 +5,9 @@
   "scripts": {
     "start": "vite serve --port 8080",
     "build": "vite build",
-    "build:lib": "vite build -c lib.vite.config.ts && pnpm build:dts",
-    "build:dts": "tsc -p ./tsconfig.json --emitDeclarationOnly && tsc-alias -p ./tsconfig.json && rollup -c ./dts.rollup.config.js",
+    "build:lib": "pnpm build:lib:vite && pnpm build:lib:dts",
+    "build:lib:vite": "vite build -c lib.vite.config.ts",
+    "build:lib:dts": "tsc -p ./tsconfig.build.json --emitDeclarationOnly && tsc-alias -p ./tsconfig.build.json && rollup -c ./dts.rollup.config.js",
     "preview": "vite preview --port 8080",
     "check:lint": "eslint \"**/*.{ts,tsx}\"",
     "check:ts": "tsc --noEmit",
@@ -44,6 +45,9 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",
