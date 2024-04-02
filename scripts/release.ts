@@ -6,8 +6,9 @@ import * as path from 'path';
 import chalk from 'chalk';
 import * as fs from 'fs';
 
-const rootPkgJson = require('../package.json');
+import rootPkgJson from '../package.json';
 const args = require('minimist')(process.argv.slice(2));
+const rootDir = path.resolve(__dirname, '..');
 
 const npmTool = 'pnpm';
 // const bin = (name: string) =>
@@ -27,8 +28,6 @@ const exec = (
   },
 ) => execa(bin, args, { stdio: 'inherit', ...opts });
 
-const getPkgPath = (pkg: string) =>
-  path.resolve(__dirname, `../packages/${pkg}`);
 const actions = {
   async release(config: Config) {
     async function publishPkg(pkgPath: string) {
@@ -56,37 +55,7 @@ const actions = {
         }
       }
     }
-    await publishPkg(path.resolve(__dirname, '..'));
-  },
-  updateVersions(pkgs: string[], version: string) {
-    function updateDeps(
-      json: Record<string, any>,
-      depType: string,
-      version: string,
-    ) {
-      const dep = json[depType];
-      for (const k in dep) {
-        if (k.startsWith('@' + rootPkgJson.name)) {
-          console.log(
-            chalk.yellow(`${json['name']} -> ${depType} -> ${k}@${version}`),
-          );
-          dep[k] = version;
-        }
-      }
-    }
-    function updatePackage(pkgPath: string, version: string) {
-      const file = fs.readFileSync(pkgPath).toString();
-      const json = JSON.parse(file);
-      json.version = version;
-      updateDeps(json, 'devDependencies', version);
-      updateDeps(json, 'dependencies', version);
-      updateDeps(json, 'peerDependencies', version);
-      fs.writeFileSync(pkgPath, JSON.stringify(json, null, 2));
-    }
-    for (const pkg of pkgs) {
-      updatePackage(path.resolve(getPkgPath(pkg), 'package.json'), version);
-    }
-    updatePackage(path.resolve(__dirname, `../package.json`), version);
+    await publishPkg(rootDir);
   },
   async gitCommit(targetVersion: string) {
     const { stdout } = await exec('git', ['diff'], { stdio: 'pipe' });
@@ -99,7 +68,7 @@ const actions = {
     }
   },
   build: () => {
-    return exec(npmTool, ['build:lib'], { execPath: __dirname });
+    return exec(npmTool, ['build:lib'], { execPath: rootDir });
   },
   async gitPush(targetVersion: string) {
     // push to GitHub
@@ -227,14 +196,6 @@ async function setup() {
   // generate changelog
   step('\nGenerating changelog...');
   await actions.genChangeLog();
-
-  // monorepo才需要重新install依赖
-  // 暂时不需要更新依赖
-  // if (isMonoRepo) {
-  //   // update pnpm-lock.yaml
-  //   step('\nUpdating lockfile...');
-  //   await exec(npmTool, ['install', '--prefer-offline']);
-  // }
 
   step('\ngit commit...');
   await actions.gitCommit(config.targetVersion);
