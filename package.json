@@ -19,11 +19,21 @@
     "release": "esno scripts/release.ts",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
-  "types": "dist/index.d.ts",
   "main": "dist/index.es.js",
   "module": "dist/index.es.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.es.js",
+    ".": {
+      "import": {
+        "node": "./dist/index.es.js",
+        "default": "./dist/index.es.js",
+        "types": "./dist/index.d.ts"
+      },
+      "require": {
+        "default": "./dist/index.es.js",
+        "types": "./dist/index.d.ts"
+      }
+    },
     "./dist/*": "./dist/*"
   },
   "files": [
