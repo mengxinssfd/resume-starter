@@ -9,4 +9,6 @@ export const Settings = {
     evaluation: true,
     personalAdvantage: true,
   },
+  // import.meta.env.APP_LAST_MODIFIED 来自于 vite.config.ts
+  lastModified: import.meta.env.APP_LAST_MODIFIED,
 };

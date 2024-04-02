@@ -1,12 +1,12 @@
-import type { FC, ReactElement } from 'react';
+import { FC, ReactElement, useContext } from 'react';
 import style from './header.module.scss';
 import { PDFDocument, StandardFonts } from 'pdf-lib';
 import { download, readFile, createHtmlElement } from '@tool-pack/dom';
 import { getClassNames } from '@tool-pack/basic';
+import { SettingContext } from '@/context';
 
 export const Header: FC = (): ReactElement => {
-  // import.meta.env.APP_LAST_MODIFIED 来自于 vite.config.ts
-  const lastModified = import.meta.env.APP_LAST_MODIFIED;
+  const { lastModified } = useContext(SettingContext);
   return (
     <div className={getClassNames(style.root, 'print-hidden')}>
       <div className="left">

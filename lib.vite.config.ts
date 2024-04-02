@@ -1,12 +1,16 @@
 import { defineConfig, UserConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
+import { getLatestCommitTime } from './vite.config';
+
+const strf = JSON.stringify;
 
 /**
  * Vite configuration
  * https://vitejs.dev/config/
  */
-export default defineConfig((): UserConfig => {
+export default defineConfig(async (): Promise<UserConfig> => {
+  const lastModified = await getLatestCommitTime('2024-03-12 00:00:00');
   return {
     publicDir: false,
     build: {
@@ -38,5 +42,9 @@ export default defineConfig((): UserConfig => {
       }),
     ],
     cacheDir: `./.cache`,
+    // 环境变量配置
+    define: {
+      'import.meta.env.APP_LAST_MODIFIED': strf(lastModified),
+    },
   };
 });
