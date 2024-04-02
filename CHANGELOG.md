@@ -1,3 +1,9 @@
+## [0.0.3](https://github.com/mengxinssfd/resume-starter/compare/v0.0.2...v0.0.3) (2024-04-02)
+
+### Bug Fixes
+
+- 修复部分编辑器不识别 ts 类型 ([639969a](https://github.com/mengxinssfd/resume-starter/commit/639969ae91b2380a6dfe390e120107e2a3d4f12c))
+
 ## [0.0.2](https://github.com/mengxinssfd/resume-starter/compare/v0.0.1...v0.0.2) (2024-04-02)
 
 ### Bug Fixes
