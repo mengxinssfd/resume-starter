@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.scss';
-import Layout from './Layout';
+import { Layout } from './Layout';
+import data from '@/data';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
   <React.StrictMode>
-    <Layout />
+    <Layout data={data} />
   </React.StrictMode>,
 );

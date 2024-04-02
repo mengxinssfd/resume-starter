@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.scss';
-import Layout from './Layout';
+import { Layout } from './Layout';
 import { DevSupport } from '@react-buddy/ide-toolbox';
 import { ComponentPreviews, useInitial } from '@/dev';
+import data from '@/data';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -14,7 +14,7 @@ root.render(
     <DevSupport
       ComponentPreviews={ComponentPreviews}
       useInitialHook={useInitial}>
-      <Layout />
+      <Layout data={data} />
     </DevSupport>
   </React.StrictMode>,
 );

@@ -128,3 +128,6 @@ dist
 #editor
 .idea
 
+
+temp
+data.local.ts

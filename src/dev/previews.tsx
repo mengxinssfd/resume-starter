@@ -1,6 +1,6 @@
 import { ComponentPreview, Previews } from '@react-buddy/ide-toolbox';
 import { PaletteTree } from './palette';
-import Layout from '@/Layout';
+import { Layout } from '@/Layout';
 import { Evaluation, Header, WorkExperience } from '@/components';
 import { Panel, Project } from '@/components/common';
 import data from '@/data';
@@ -9,7 +9,7 @@ const ComponentPreviews = () => {
   return (
     <Previews palette={<PaletteTree />}>
       <ComponentPreview path="/Layout">
-        <Layout />
+        <Layout data={data} />
       </ComponentPreview>
       <ComponentPreview path="/WorkExperience">
         <WorkExperience />
