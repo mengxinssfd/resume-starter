@@ -2,12 +2,17 @@ import style from './work.module.scss';
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactElement } from 'react';
 import { List, MarkdownViewer, Panel } from '@/components';
+import { usePanelSetting } from '@/utils';
 
+/**
+ * 工作经历
+ */
 export const WorkExperience: FC = (): ReactElement => {
   const { workExperience: companies } = useContext(DataContext);
+  const { name } = usePanelSetting('workExperience');
 
   return (
-    <Panel className={style.root} title="工作经历">
+    <Panel className={style.root} title={name}>
       <ul className="work-list">
         {companies.map((company, index) => {
           return (

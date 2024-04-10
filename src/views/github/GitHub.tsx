@@ -1,13 +1,15 @@
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactNode } from 'react';
 import { Panel } from '@/components';
-import { getGitHubLink } from '@/utils';
+import { getGitHubLink, usePanelSetting } from '@/utils';
 import style from './github.module.scss';
 
 export const GitHub: FC = (): ReactNode => {
   const {
     contact: { github: username },
   } = useContext(DataContext);
+  const { name } = usePanelSetting('github');
+
   if (!username) return;
 
   const link = getGitHubLink(username);
@@ -16,7 +18,7 @@ export const GitHub: FC = (): ReactNode => {
   const lang = `https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&hide_border=true&layout=compact&locale=cn&custom_title=${username}常用的语言`;
 
   return (
-    <Panel className={style.root} title="GitHub">
+    <Panel className={style.root} title={name}>
       <div className="link">
         <i className="iconfont icon-github"></i>
         <a href={link} target="_blank" rel="noreferrer">

@@ -8,6 +8,7 @@ export const Footer: FC = (): ReactElement => {
       <a
         className="footer-link"
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/mengxinssfd/resume-starter">
         Host On Github
       </a>

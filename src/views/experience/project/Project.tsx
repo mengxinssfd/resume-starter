@@ -2,12 +2,17 @@ import { DataContext } from '@/context';
 import { useContext, type FC, type ReactElement } from 'react';
 import { Panel, Project } from '@/components';
 import style from './project.module.scss';
+import { usePanelSetting } from '@/utils';
 
+/**
+ * 项目经历
+ */
 export const ProjectExperience: FC = (): ReactElement => {
   const { projectExperience: projects } = useContext(DataContext);
+  const { name } = usePanelSetting('projectExperience');
 
   return (
-    <Panel title="项目经历">
+    <Panel title={name}>
       <ul className={style['project-list']}>
         {projects.map((project, i) => {
           return (

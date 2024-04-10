@@ -139,16 +139,47 @@ export interface Data {
   personalAdvantage: string[];
 }
 
+export interface Panel {
+  /**
+   * 板块名称
+   */
+  name?: string;
+}
+
+export type SortablePanels =
+  | 'skill'
+  | 'workExperience'
+  | 'projectExperience'
+  | 'github'
+  | 'personalProject'
+  | 'evaluation'
+  | 'personalAdvantage';
+
 export interface Settings {
-  visible: {
-    info: boolean;
-    skill: boolean;
-    workExperience: boolean;
-    projectExperience: boolean;
-    github: boolean;
-    personalProject: boolean;
-    evaluation: boolean;
-    personalAdvantage: boolean;
+  /**
+   * 排序后的板块，不在该数组中的板块会被隐藏
+   */
+  sortedPanels?: SortablePanels[];
+  /**
+   * 配置板块的名称或其它配置
+   */
+  panels: {
+    info?: Panel;
+    skill?: Panel;
+    workExperience?: Panel;
+    projectExperience?: Panel;
+    github?: Panel;
+    personalProject?: Panel & {
+      /**
+       * 是否显示小尾巴
+       */
+      tipsVisible?: boolean;
+    };
+    evaluation?: Panel;
+    personalAdvantage?: Panel;
   };
+  /**
+   * 最后更新时间
+   */
   lastModified: string;
 }
