@@ -160,16 +160,16 @@ export interface Settings {
    * 排序后的板块，不在该数组中的板块会被隐藏
    */
   sortedPanels?: SortablePanels[];
+  info?: {
+    /**
+     * 工作经验计算保留小数点位数
+     */
+    workAtFractionDigits?: number;
+  };
   /**
    * 配置板块的名称或其它配置
    */
   panels: {
-    info?: Panel & {
-      /**
-       * 工作经验计算保留小数点位数
-       */
-      workAtFractionDigits?: number;
-    };
     skill?: Panel;
     workExperience?: Panel;
     projectExperience?: Panel;

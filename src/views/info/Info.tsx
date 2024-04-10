@@ -4,11 +4,11 @@ import { yearDiff, getClassNames } from '@tool-pack/basic';
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactElement } from 'react';
 import { getGitHubLink } from '@/utils';
-import { usePanelSetting } from '@/hooks';
+import { useSettings } from '@/hooks';
 
 export const Info: FC = (): ReactElement => {
   const { info, contact } = useContext(DataContext);
-  const { workAtFractionDigits = 1 } = usePanelSetting('info');
+  const { workAtFractionDigits = 1 } = useSettings('info');
 
   const experience =
     typeof info.workAt === 'number'

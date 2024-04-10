@@ -10,8 +10,8 @@ export const presetSettings = {
     'personalProject',
     'evaluation',
   ],
+  info: { workAtFractionDigits: 1 },
   panels: {
-    info: { name: '个人信息', workAtFractionDigits: 1 },
     skill: { name: '技能' },
     workExperience: { name: '工作经验' },
     projectExperience: { name: '项目经验' },
