@@ -1,3 +1,9 @@
+## [0.1.1](https://github.com/mengxinssfd/resume-starter/compare/v0.1.0...v0.1.1) (2024-04-10)
+
+### Bug Fixes
+
+- 修复预设配置会被未设置的配置覆盖的问题 ([d2b8ce8](https://github.com/mengxinssfd/resume-starter/commit/d2b8ce86f130a121636eacef6da3ca1c5d2a4612))
+
 # [0.1.0](https://github.com/mengxinssfd/resume-starter/compare/v0.0.3...v0.1.0) (2024-04-10)
 
 ### Performance Improvements

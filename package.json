@@ -1,6 +1,6 @@
 {
   "name": "@mxssfd/resume-starter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packageManager": "pnpm@7.1.0",
   "scripts": {
     "start": "vite serve --port 8080",
