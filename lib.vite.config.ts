@@ -44,6 +44,7 @@ export default defineConfig(async (): Promise<UserConfig> => {
     cacheDir: `./.cache`,
     // 环境变量配置
     define: {
+      'process.env.NODE_ENV': "'production'",
       'import.meta.env.APP_LAST_MODIFIED': strf(lastModified),
     },
   };
