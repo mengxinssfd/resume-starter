@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 import data from './data';
-import { Settings } from '@/settings';
+import { settings } from '@/settings';
 
 export const DataContext = createContext(data);
-export const SettingContext = createContext(Settings);
+export const SettingContext = createContext(settings);

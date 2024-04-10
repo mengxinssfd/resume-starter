@@ -10,17 +10,17 @@ import {
   Footer,
   PersonalAdvantage,
 } from '@/components';
-import { Settings } from '@/settings';
+import { settings as globalSettings } from '@/settings';
 import type { FC, ReactElement } from 'react';
 import './index.scss';
-import type { Data } from '@/interfaces';
+import type { Data, Settings } from '@/interfaces';
 import { DataContext, SettingContext } from './context';
 
-export const Layout: FC<{ data: Data; settings?: typeof Settings }> = ({
+export const Layout: FC<{ data: Data; settings?: Settings }> = ({
   data,
   settings,
 }): ReactElement => {
-  settings = Object.assign(Settings, settings);
+  settings = Object.assign(globalSettings, settings);
   const { visible } = settings;
   return (
     <SettingContext.Provider value={settings}>

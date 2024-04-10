@@ -1,4 +1,6 @@
-export const Settings = {
+import { Settings } from './interfaces';
+
+export const settings: Settings = {
   visible: {
     info: true,
     skill: true,

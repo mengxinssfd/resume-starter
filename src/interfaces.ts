@@ -138,3 +138,17 @@ export interface Data {
    */
   personalAdvantage: string[];
 }
+
+export interface Settings {
+  visible: {
+    info: boolean;
+    skill: boolean;
+    workExperience: boolean;
+    projectExperience: boolean;
+    github: boolean;
+    personalProject: boolean;
+    evaluation: boolean;
+    personalAdvantage: boolean;
+  };
+  lastModified: string;
+}
