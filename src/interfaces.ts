@@ -164,7 +164,12 @@ export interface Settings {
    * 配置板块的名称或其它配置
    */
   panels: {
-    info?: Panel;
+    info?: Panel & {
+      /**
+       * 工作经验计算保留小数点位数
+       */
+      workAtFractionDigits?: number;
+    };
     skill?: Panel;
     workExperience?: Panel;
     projectExperience?: Panel;

@@ -3,15 +3,16 @@ import style from './info.module.scss';
 import { yearDiff, getClassNames } from '@tool-pack/basic';
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactElement } from 'react';
-import { getGitHubLink } from '@/utils';
+import { getGitHubLink, usePanelSetting } from '@/utils';
 
 export const Info: FC = (): ReactElement => {
   const { info, contact } = useContext(DataContext);
+  const { workAtFractionDigits = 1 } = usePanelSetting('info');
 
   const experience =
     typeof info.workAt === 'number'
       ? info.workAt
-      : yearDiff(new Date(), info.workAt).toFixed(1);
+      : yearDiff(new Date(), info.workAt).toFixed(workAtFractionDigits);
 
   const contactQueue: Array<keyof Contact> = [
     'phone',
