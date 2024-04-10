@@ -30,7 +30,7 @@ export const Layout: FC<{ data: Data; settings?: Settings }> = ({
   data,
   settings,
 }): ReactElement => {
-  settings = Object.assign(presetSettings, settings);
+  settings = Object.assign({}, presetSettings, settings);
   return (
     <SettingContext.Provider value={settings}>
       <DataContext.Provider value={data}>
@@ -40,7 +40,7 @@ export const Layout: FC<{ data: Data; settings?: Settings }> = ({
           <section className="body">
             {settings.sortedPanels?.map((k) => {
               const Comp = map[k];
-              return <Comp />;
+              return <Comp key={k} />;
             })}
           </section>
         </article>

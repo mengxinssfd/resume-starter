@@ -8,8 +8,7 @@ export function useSettings<K extends keyof Settings>(key: K): Settings[K];
 export function useSettings<K extends keyof Settings>(
   key?: K,
 ): Settings | Settings[K] {
-  const _settings = useContext(SettingContext);
-  const settings = Object.assign({}, presetSettings, _settings);
+  const settings = useContext(SettingContext);
   if (key) return Object.assign({}, presetSettings[key], settings[key]);
   return settings;
 }
