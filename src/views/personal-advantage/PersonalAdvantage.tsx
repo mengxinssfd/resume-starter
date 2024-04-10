@@ -1,7 +1,7 @@
 import style from './personal-advantage.module.scss';
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactElement } from 'react';
-import { List, Panel } from '@/components/common';
+import { List, Panel } from '@/components';
 
 export const PersonalAdvantage: FC = (): ReactElement => {
   const { personalAdvantage } = useContext(DataContext);

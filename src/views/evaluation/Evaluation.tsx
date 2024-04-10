@@ -1,7 +1,7 @@
 import style from './evaluation.module.scss';
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactElement } from 'react';
-import { MarkdownViewer, Panel } from '@/components/common';
+import { MarkdownViewer, Panel } from '@/components';
 
 export const Evaluation: FC = (): ReactElement => {
   const { evaluation } = useContext(DataContext);

@@ -9,7 +9,7 @@ import {
   Evaluation,
   Footer,
   PersonalAdvantage,
-} from '@/components';
+} from '@/views';
 import { settings as globalSettings } from '@/settings';
 import type { FC, ReactElement } from 'react';
 import './index.scss';

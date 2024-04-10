@@ -1,6 +1,6 @@
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactElement } from 'react';
-import { Panel, Project } from '@/components/common';
+import { Panel, Project } from '@/components';
 import style from './project.module.scss';
 
 export const ProjectExperience: FC = (): ReactElement => {

@@ -1,8 +1,8 @@
 import { ComponentPreview, Previews } from '@react-buddy/ide-toolbox';
 import { PaletteTree } from './palette';
 import { Layout } from '@/Layout';
-import { Evaluation, Header, WorkExperience } from '@/components';
-import { Panel, Project } from '@/components/common';
+import { Evaluation, Header, WorkExperience } from '@/views';
+import { Panel, Project } from '@/components';
 import data from '@/data';
 
 const ComponentPreviews = () => {

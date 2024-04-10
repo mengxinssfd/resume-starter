@@ -2,7 +2,7 @@ import style from './project.module.scss';
 import type { FC, ReactElement } from 'react';
 import type { Project as ProjectType } from '@/interfaces';
 import { getClassNames } from '@tool-pack/basic';
-import { List, MarkdownViewer } from '@/components/common';
+import { List, MarkdownViewer } from '@/components';
 
 export const Project: FC<{ project: ProjectType }> = ({
   project,

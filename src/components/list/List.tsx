@@ -2,7 +2,7 @@ import style from './list.module.scss';
 import type { FC, PropsWithChildren, ReactElement } from 'react';
 import { createElement } from 'react';
 import { getClassNames } from '@tool-pack/basic';
-import { MarkdownViewer } from '@/components/common';
+import { MarkdownViewer } from '@/components';
 
 export const List: FC<
   PropsWithChildren<{

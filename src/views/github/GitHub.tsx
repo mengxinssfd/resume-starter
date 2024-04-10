@@ -1,6 +1,6 @@
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactNode } from 'react';
-import { Panel } from '@/components/common';
+import { Panel } from '@/components';
 import { getGitHubLink } from '@/utils';
 import style from './github.module.scss';
 

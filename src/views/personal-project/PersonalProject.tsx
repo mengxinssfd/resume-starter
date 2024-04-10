@@ -1,7 +1,7 @@
 import style from './personal-project.module.scss';
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactElement } from 'react';
-import { Panel } from '@/components/common';
+import { Panel } from '@/components';
 import { getGitHubLink } from '@/utils';
 
 export const PersonalProject: FC = (): ReactElement => {

@@ -1,7 +1,7 @@
 import style from './work.module.scss';
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactElement } from 'react';
-import { List, MarkdownViewer, Panel } from '@/components/common';
+import { List, MarkdownViewer, Panel } from '@/components';
 
 export const WorkExperience: FC = (): ReactElement => {
   const { workExperience: companies } = useContext(DataContext);
