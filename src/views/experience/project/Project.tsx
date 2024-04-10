@@ -2,7 +2,7 @@ import { DataContext } from '@/context';
 import { useContext, type FC, type ReactElement } from 'react';
 import { Panel, Project } from '@/components';
 import style from './project.module.scss';
-import { usePanelSetting } from '@/utils';
+import { usePanelSetting } from '@/hooks';
 
 /**
  * 项目经历

@@ -2,7 +2,7 @@ import style from './work.module.scss';
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactElement } from 'react';
 import { List, MarkdownViewer, Panel } from '@/components';
-import { usePanelSetting } from '@/utils';
+import { usePanelSetting } from '@/hooks';
 
 /**
  * 工作经历

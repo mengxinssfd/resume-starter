@@ -3,7 +3,8 @@ import style from './info.module.scss';
 import { yearDiff, getClassNames } from '@tool-pack/basic';
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactElement } from 'react';
-import { getGitHubLink, usePanelSetting } from '@/utils';
+import { getGitHubLink } from '@/utils';
+import { usePanelSetting } from '@/hooks';
 
 export const Info: FC = (): ReactElement => {
   const { info, contact } = useContext(DataContext);

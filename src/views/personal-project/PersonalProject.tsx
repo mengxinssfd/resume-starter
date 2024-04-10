@@ -2,7 +2,8 @@ import style from './personal-project.module.scss';
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactElement } from 'react';
 import { Panel } from '@/components';
-import { getGitHubLink, usePanelSetting } from '@/utils';
+import { getGitHubLink } from '@/utils';
+import { usePanelSetting } from '@/hooks';
 
 /**
  * 个人项目

@@ -1,7 +1,8 @@
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactNode } from 'react';
 import { Panel } from '@/components';
-import { getGitHubLink, usePanelSetting } from '@/utils';
+import { getGitHubLink } from '@/utils';
+import { usePanelSetting } from '@/hooks';
 import style from './github.module.scss';
 
 export const GitHub: FC = (): ReactNode => {

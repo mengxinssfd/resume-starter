@@ -2,7 +2,7 @@ import style from './skill.module.scss';
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactElement } from 'react';
 import { List, Panel } from '@/components';
-import { usePanelSetting } from '@/utils';
+import { usePanelSetting } from '@/hooks';
 
 /**
  * 技能

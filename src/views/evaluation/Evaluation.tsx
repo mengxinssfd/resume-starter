@@ -2,7 +2,7 @@ import style from './evaluation.module.scss';
 import { DataContext } from '@/context';
 import { useContext, type FC, type ReactElement } from 'react';
 import { MarkdownViewer, Panel } from '@/components';
-import { usePanelSetting } from '@/utils';
+import { usePanelSetting } from '@/hooks';
 
 /**
  * 自我评价
