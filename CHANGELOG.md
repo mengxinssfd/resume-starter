@@ -1,3 +1,9 @@
+# [0.1.0](https://github.com/mengxinssfd/resume-starter/compare/v0.0.3...v0.1.0) (2024-04-10)
+
+### Performance Improvements
+
+- 优化 ([dbc18c4](https://github.com/mengxinssfd/resume-starter/commit/dbc18c4bd95039cf0e6e7b239b67402ba36731ad))
+
 ## [0.0.3](https://github.com/mengxinssfd/resume-starter/compare/v0.0.2...v0.0.3) (2024-04-02)
 
 ### Bug Fixes
