@@ -1,3 +1,9 @@
+## [0.1.2](https://github.com/mengxinssfd/resume-starter/compare/v0.1.1...v0.1.2) (2024-04-11)
+
+### Features
+
+- 可配置个人信息工作经验的计算精度 ([39969df](https://github.com/mengxinssfd/resume-starter/commit/39969dfc2ef4f1c57fe3d11ec8eac0288036e8ad))
+
 ## [0.1.1](https://github.com/mengxinssfd/resume-starter/compare/v0.1.0...v0.1.1) (2024-04-10)
 
 ### Bug Fixes
