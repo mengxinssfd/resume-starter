@@ -1,6 +1,6 @@
 import style from './personal-project.module.scss';
 import { DataContext } from '@/context';
-import { useContext, type FC, type ReactElement } from 'react';
+import React from 'react';
 import { Panel } from '@/components';
 import { getGitHubLink } from '@/utils';
 import { usePanelSetting } from '@/hooks';
@@ -8,8 +8,8 @@ import { usePanelSetting } from '@/hooks';
 /**
  * 个人项目
  */
-export const PersonalProject: FC = (): ReactElement => {
-  const { personalProject: projects, contact } = useContext(DataContext);
+export const PersonalProject: React.FC = (): React.ReactElement => {
+  const { personalProject: projects, contact } = React.useContext(DataContext);
   const { tipsVisible, name } = usePanelSetting('personalProject');
 
   const link = contact.github ? getGitHubLink(contact.github) : '';
