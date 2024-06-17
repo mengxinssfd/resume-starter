@@ -1,3 +1,9 @@
+# [0.2.0](https://github.com/mengxinssfd/resume-starter/compare/v0.1.3...v0.2.0) (2024-06-17)
+
+### Bug Fixes
+
+- React is not defined ([b87d2a6](https://github.com/mengxinssfd/resume-starter/commit/b87d2a69a512add4ab5837d79b7ebd5891b51c09))
+
 ## [0.1.3](https://github.com/mengxinssfd/resume-starter/compare/v0.1.2...v0.1.3) (2024-06-17)
 
 ### Bug Fixes
