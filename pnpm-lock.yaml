@@ -7,6 +7,18 @@ settings:
 importers:
   .:
     dependencies:
+      '@tool-pack/basic':
+        specifier: ^0.7.0
+        version: 0.7.0
+      '@tool-pack/dom':
+        specifier: ^0.2.1
+        version: 0.2.1
+      markdown-it:
+        specifier: ^14.1.0
+        version: 14.1.0
+      pdf-lib:
+        specifier: ^1.17.1
+        version: 1.17.1
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -35,12 +47,6 @@ importers:
       '@testing-library/react':
         specifier: ^14.2.1
         version: 14.2.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@tool-pack/basic':
-        specifier: ^0.7.0
-        version: 0.7.0
-      '@tool-pack/dom':
-        specifier: ^0.2.1
-        version: 0.2.1
       '@types/jest':
         specifier: ^29.5.12
         version: 29.5.12
@@ -92,15 +98,9 @@ importers:
       lint-staged:
         specifier: ^15.2.2
         version: 15.2.2
-      markdown-it:
-        specifier: ^14.1.0
-        version: 14.1.0
       npm-check-updates:
         specifier: ^16.14.15
         version: 16.14.15
-      pdf-lib:
-        specifier: ^1.17.1
-        version: 1.17.1
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
