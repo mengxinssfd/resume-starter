@@ -10,7 +10,7 @@ export const List: React.FC<
     className?: string;
     list: string[];
   }>
-> = ({ tag, className, list }): React.ReactElement => {
+> = ({ tag = 'ul', className, list }): React.ReactElement => {
   return createElement(
     tag!,
     {
@@ -19,5 +19,3 @@ export const List: React.FC<
     list.map((item) => <MarkdownViewer key={item} tag="li" content={item} />),
   );
 };
-
-List.defaultProps = { tag: 'ul' };

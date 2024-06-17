@@ -10,13 +10,12 @@ export const MarkdownViewer: React.FC<
     className?: string;
     content: string;
   }>
-> = ({ tag, className, content }): React.ReactElement => {
+> = ({ tag = 'div', className, content }): React.ReactElement => {
   return createElement(tag!, {
     className: getClassNames(style.root, className) || undefined,
     dangerouslySetInnerHTML: { __html: renderMD(content) },
   });
 };
-MarkdownViewer.defaultProps = { tag: 'div' };
 
 const md = MarkdownIt({
   html: true, // Enable HTML tags in source
