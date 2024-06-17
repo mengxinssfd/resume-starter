@@ -16,7 +16,7 @@ export default defineConfig(async (env) => {
   const lastModified = await getLatestCommitTime('2024-03-12 00:00:00');
   const isDev = env.mode === 'development';
   return {
-    base: isDev ? undefined : '/mengxinssfd/resume-starter',
+    base: isDev ? undefined : '/resume-starter',
     cacheDir: `./.cache`,
     plugins: [
       // https://github.com/vitejs/vite/tree/main/packages/plugin-react
