@@ -1,3 +1,9 @@
+## [0.1.3](https://github.com/mengxinssfd/resume-starter/compare/v0.1.2...v0.1.3) (2024-06-17)
+
+### Bug Fixes
+
+- 修复 header view 中的文件 input 会在点击并取消后不会清理的问题 ([e074b86](https://github.com/mengxinssfd/resume-starter/commit/e074b86262f96b09a38950806a8a3129747c50d0))
+
 ## [0.1.2](https://github.com/mengxinssfd/resume-starter/compare/v0.1.1...v0.1.2) (2024-04-11)
 
 ### Features
