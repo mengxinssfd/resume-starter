@@ -2,11 +2,11 @@ import type { Contact } from '@/interfaces';
 import style from './info.module.scss';
 import { yearDiff, getClassNames } from '@tool-pack/basic';
 import { DataContext } from '@/context';
-import { useContext, type FC, type ReactElement } from 'react';
+import React, { useContext } from 'react';
 import { getGitHubLink } from '@/utils';
 import { useSettings } from '@/hooks';
 
-export const Info: FC = (): ReactElement => {
+export const Info: React.FC = (): React.ReactElement => {
   const { info, contact } = useContext(DataContext);
   const { workAtFractionDigits = 1 } = useSettings('info');
 

@@ -1,12 +1,12 @@
 import style from './project.module.scss';
-import type { FC, ReactElement } from 'react';
+import React from 'react';
 import type { Project as ProjectType } from '@/interfaces';
 import { getClassNames } from '@tool-pack/basic';
 import { List, MarkdownViewer } from '@/components';
 
-export const Project: FC<{ project: ProjectType }> = ({
+export const Project: React.FC<{ project: ProjectType }> = ({
   project,
-}): ReactElement => {
+}): React.ReactElement => {
   return (
     <section className={getClassNames('pre-line', style.root)}>
       <div className="item">

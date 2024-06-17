@@ -1,16 +1,16 @@
 import style from './list.module.scss';
-import type { FC, PropsWithChildren, ReactElement } from 'react';
+import React from 'react';
 import { createElement } from 'react';
 import { getClassNames } from '@tool-pack/basic';
 import { MarkdownViewer } from '@/components';
 
-export const List: FC<
-  PropsWithChildren<{
+export const List: React.FC<
+  React.PropsWithChildren<{
     tag?: keyof HTMLElementTagNameMap;
     className?: string;
     list: string[];
   }>
-> = ({ tag, className, list }): ReactElement => {
+> = ({ tag, className, list }): React.ReactElement => {
   return createElement(
     tag!,
     {

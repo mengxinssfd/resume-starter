@@ -1,12 +1,13 @@
 {
   "name": "@mxssfd/resume-starter",
   "version": "0.1.2",
-  "packageManager": "pnpm@7.1.0",
+  "packageManager": "pnpm@9.3.0",
   "scripts": {
     "start": "vite serve --port 8080",
     "build": "vite build",
     "build:lib": "pnpm build:lib:vite && pnpm build:lib:dts",
     "build:lib:vite": "vite build -c lib.vite.config.ts",
+    "analyze:lib": "vite build -c lib.vite.config.ts --mode analyze",
     "build:lib:dts": "tsc -p ./tsconfig.build.json --emitDeclarationOnly && tsc-alias -p ./tsconfig.build.json && rollup -c ./dts.rollup.config.js",
     "preview": "vite preview --port 8080",
     "check:lint": "eslint \"**/*.{ts,tsx}\"",
@@ -53,8 +54,12 @@
     ]
   },
   "dependencies": {
+    "@tool-pack/basic": "^0.7.0",
+    "@tool-pack/dom": "^0.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "markdown-it": "^14.1.0",
+    "pdf-lib": "^1.17.1"
   },
   "peerDependencies": {
     "react": "^18.2.0"
@@ -67,8 +72,6 @@
     "@commitlint/config-conventional": "^19.1.0",
     "@react-buddy/ide-toolbox": "^2.4.0",
     "@testing-library/react": "^14.2.1",
-    "@tool-pack/basic": "^0.7.0",
-    "@tool-pack/dom": "^0.2.1",
     "@types/jest": "^29.5.12",
     "@types/markdown-it": "^13.0.7",
     "@types/node": "^20.11.26",
@@ -86,20 +89,20 @@
     "execa": "^8.0.1",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
-    "markdown-it": "^14.1.0",
     "npm-check-updates": "^16.14.15",
-    "pdf-lib": "^1.17.1",
     "prettier": "^3.2.5",
     "react-router-dom": "^6.22.3",
     "react-scripts": "^5.0.1",
     "resetcss": "^1.0.3",
     "rollup": "^4.13.2",
     "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-visualizer": "^5.12.0",
     "sass": "^1.71.1",
     "semver": "^7.6.0",
     "tsc-alias": "^1.8.8",
     "typescript": "^5.4.2",
     "vite": "^5.1.6",
+    "vite-plugin-replace": "^0.1.1",
     "web-vitals": "^3.5.2"
   },
   "browserslist": {

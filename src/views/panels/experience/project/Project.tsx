@@ -1,5 +1,5 @@
 import { DataContext } from '@/context';
-import { useContext, type FC, type ReactElement } from 'react';
+import React from 'react';
 import { Panel, Project } from '@/components';
 import style from './project.module.scss';
 import { usePanelSetting } from '@/hooks';
@@ -7,8 +7,8 @@ import { usePanelSetting } from '@/hooks';
 /**
  * 项目经历
  */
-export const ProjectExperience: FC = (): ReactElement => {
-  const { projectExperience: projects } = useContext(DataContext);
+export const ProjectExperience: React.FC = (): React.ReactElement => {
+  const { projectExperience: projects } = React.useContext(DataContext);
   const { name } = usePanelSetting('projectExperience');
 
   return (

@@ -1,9 +1,9 @@
 import style from './panel.module.scss';
-import type { FC, PropsWithChildren, ReactNode, ReactElement } from 'react';
+import React from 'react';
 import { getClassNames } from '@tool-pack/basic';
-export const Panel: FC<
-  PropsWithChildren<{ title: ReactNode; className?: string }>
-> = ({ title, children, className }): ReactElement => {
+export const Panel: React.FC<
+  React.PropsWithChildren<{ title: React.ReactNode; className?: string }>
+> = ({ title, children, className }): React.ReactElement => {
   return (
     <section className={getClassNames(style.root, className)}>
       <div className="panel-header">

@@ -1,8 +1,8 @@
-import type { FC, ReactElement } from 'react';
+import React from 'react';
 import style from './footer.module.scss';
 import { getClassNames } from '@tool-pack/basic';
 
-export const Footer: FC = (): ReactElement => {
+export const Footer: React.FC = (): React.ReactElement => {
   return (
     <footer className={getClassNames('print-hidden', style.root)}>
       <a

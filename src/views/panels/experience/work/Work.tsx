@@ -1,14 +1,14 @@
 import style from './work.module.scss';
 import { DataContext } from '@/context';
-import { useContext, type FC, type ReactElement } from 'react';
+import React from 'react';
 import { List, MarkdownViewer, Panel } from '@/components';
 import { usePanelSetting } from '@/hooks';
 
 /**
  * 工作经历
  */
-export const WorkExperience: FC = (): ReactElement => {
-  const { workExperience: companies } = useContext(DataContext);
+export const WorkExperience: React.FC = (): React.ReactElement => {
+  const { workExperience: companies } = React.useContext(DataContext);
   const { name } = usePanelSetting('workExperience');
 
   return (

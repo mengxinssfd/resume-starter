@@ -11,12 +11,12 @@ import {
   PersonalAdvantage,
 } from '@/views';
 import { presetSettings } from '@/settings.preset';
-import type { FC, FunctionComponent, ReactElement } from 'react';
+import React from 'react';
 import './index.scss';
 import type { Data, Settings, SortablePanels } from '@/interfaces';
 import { DataContext, SettingContext } from './context';
 
-const map: Record<SortablePanels, FunctionComponent> = {
+const map: Record<SortablePanels, React.FunctionComponent> = {
   skill: Skill,
   personalAdvantage: PersonalAdvantage,
   workExperience: WorkExperience,
@@ -26,10 +26,10 @@ const map: Record<SortablePanels, FunctionComponent> = {
   evaluation: Evaluation,
 };
 
-export const Layout: FC<{ data: Data; settings?: Settings }> = ({
+export const Layout: React.FC<{ data: Data; settings?: Settings }> = ({
   data,
   settings,
-}): ReactElement => {
+}): React.ReactElement => {
   settings = Object.assign({}, presetSettings, settings);
   return (
     <SettingContext.Provider value={settings}>

@@ -1,14 +1,14 @@
 import style from './evaluation.module.scss';
 import { DataContext } from '@/context';
-import { useContext, type FC, type ReactElement } from 'react';
+import React from 'react';
 import { MarkdownViewer, Panel } from '@/components';
 import { usePanelSetting } from '@/hooks';
 
 /**
  * 自我评价
  */
-export const Evaluation: FC = (): ReactElement => {
-  const { evaluation } = useContext(DataContext);
+export const Evaluation: React.FC = (): React.ReactElement => {
+  const { evaluation } = React.useContext(DataContext);
   const { name } = usePanelSetting('evaluation');
 
   return (

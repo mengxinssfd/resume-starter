@@ -1,14 +1,14 @@
 import { DataContext } from '@/context';
-import { useContext, type FC, type ReactNode } from 'react';
+import React from 'react';
 import { Panel } from '@/components';
 import { getGitHubLink } from '@/utils';
 import { usePanelSetting } from '@/hooks';
 import style from './github.module.scss';
 
-export const GitHub: FC = (): ReactNode => {
+export const GitHub: React.FC = (): React.ReactNode => {
   const {
     contact: { github: username },
-  } = useContext(DataContext);
+  } = React.useContext(DataContext);
   const { name } = usePanelSetting('github');
 
   if (!username) return;

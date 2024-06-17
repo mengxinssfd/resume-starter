@@ -1,16 +1,16 @@
 import style from './markdown-viewer.module.scss';
-import type { FC, PropsWithChildren, ReactElement } from 'react';
+import React from 'react';
 import { createElement } from 'react';
 import { getClassNames } from '@tool-pack/basic';
 import MarkdownIt from 'markdown-it';
 
-export const MarkdownViewer: FC<
-  PropsWithChildren<{
+export const MarkdownViewer: React.FC<
+  React.PropsWithChildren<{
     tag?: keyof HTMLElementTagNameMap;
     className?: string;
     content: string;
   }>
-> = ({ tag, className, content }): ReactElement => {
+> = ({ tag, className, content }): React.ReactElement => {
   return createElement(tag!, {
     className: getClassNames(style.root, className) || undefined,
     dangerouslySetInnerHTML: { __html: renderMD(content) },

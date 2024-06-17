@@ -1,7 +1,8 @@
 import { defineConfig, UserConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import { getLatestCommitTime } from './vite.config';
+import { replaceCodePlugin } from 'vite-plugin-replace';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 const strf = JSON.stringify;
 
@@ -21,7 +22,14 @@ export default defineConfig(async (): Promise<UserConfig> => {
             format: 'es',
           },
         ],
-        external: ['react', 'react-dom'],
+        external: [
+          'react',
+          'react-dom',
+          'markdown-it',
+          'pdf-lib',
+          '@tool-pack/basic',
+          '@tool-pack/dom',
+        ],
       },
       outDir: resolve(__dirname, './dist'),
       lib: { entry: resolve(__dirname, 'src/Layout.tsx') },
@@ -37,10 +45,24 @@ export default defineConfig(async (): Promise<UserConfig> => {
     },
     plugins: [
       // https://github.com/vitejs/vite/tree/main/packages/plugin-react
-      react({
-        jsxRuntime: 'automatic',
+      // react({
+      //   jsxRuntime: 'automatic',
+      // }),
+      replaceCodePlugin({
+        replacements: [
+          { to: strf('production'), from: 'process.env.NODE_ENV' },
+        ],
       }),
+      {
+        ...(visualizer({ filename: 'temp/analyze.html' }) as Plugin),
+        apply(_, { mode }) {
+          return mode === 'analyze';
+        },
+      },
     ],
+    esbuild: {
+      tsconfigRaw: { compilerOptions: { jsx: 'react' } },
+    },
     cacheDir: `./.cache`,
     // 环境变量配置
     define: {
