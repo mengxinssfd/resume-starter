@@ -1,7 +1,6 @@
-import { defineConfig, UserConfig } from 'vite';
+import { defineConfig, UserConfig, Plugin } from 'vite';
 import { resolve } from 'path';
 import { getLatestCommitTime } from './vite.config';
-import { replaceCodePlugin } from 'vite-plugin-replace';
 import { visualizer } from 'rollup-plugin-visualizer';
 
 const strf = JSON.stringify;
@@ -48,11 +47,6 @@ export default defineConfig(async (): Promise<UserConfig> => {
       // react({
       //   jsxRuntime: 'automatic',
       // }),
-      replaceCodePlugin({
-        replacements: [
-          { to: strf('production'), from: 'process.env.NODE_ENV' },
-        ],
-      }),
       {
         ...(visualizer({ filename: 'temp/analyze.html' }) as Plugin),
         apply(_, { mode }) {

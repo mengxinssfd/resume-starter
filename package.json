@@ -102,7 +102,6 @@
     "tsc-alias": "^1.8.8",
     "typescript": "^5.4.2",
     "vite": "^5.1.6",
-    "vite-plugin-replace": "^0.1.1",
     "web-vitals": "^3.5.2"
   },
   "browserslist": {

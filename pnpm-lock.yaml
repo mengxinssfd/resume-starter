@@ -137,9 +137,6 @@ importers:
       vite:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.11.26)(sass@1.71.1)(terser@5.29.1)
-      vite-plugin-replace:
-        specifier: ^0.1.1
-        version: 0.1.1(vite@5.1.6(@types/node@20.11.26)(sass@1.71.1)(terser@5.29.1))
       web-vitals:
         specifier: ^3.5.2
         version: 3.5.2
@@ -11781,14 +11778,6 @@ packages:
       }
     engines: { node: '>= 0.8' }
 
-  vite-plugin-replace@0.1.1:
-    resolution:
-      {
-        integrity: sha512-v+okl3JNt2pf1jDYijw+WPVt6h9FWa/atTi+qnSFBqmKThLTDhlesx0r3bh+oFPmxRJmis5tNx9HtN6lGFoqWg==,
-      }
-    peerDependencies:
-      vite: ^2
-
   vite@5.1.6:
     resolution:
       {
@@ -20365,10 +20354,6 @@ snapshots:
       builtins: 5.0.1
 
   vary@1.1.2: {}
-
-  vite-plugin-replace@0.1.1(vite@5.1.6(@types/node@20.11.26)(sass@1.71.1)(terser@5.29.1)):
-    dependencies:
-      vite: 5.1.6(@types/node@20.11.26)(sass@1.71.1)(terser@5.29.1)
 
   vite@5.1.6(@types/node@20.11.26)(sass@1.71.1)(terser@5.29.1):
     dependencies:
