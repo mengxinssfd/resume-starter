@@ -1,3 +1,5 @@
+## [0.2.1](https://github.com/mengxinssfd/resume-starter/compare/v0.2.0...v0.2.1) (2024-06-17)
+
 # [0.2.0](https://github.com/mengxinssfd/resume-starter/compare/v0.1.3...v0.2.0) (2024-06-17)
 
 ### Bug Fixes
