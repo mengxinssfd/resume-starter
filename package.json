@@ -55,7 +55,7 @@
   },
   "dependencies": {
     "@tool-pack/basic": "^0.7.0",
-    "@tool-pack/dom": "^0.2.1",
+    "@tool-pack/dom": "^0.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "markdown-it": "^14.1.0",
