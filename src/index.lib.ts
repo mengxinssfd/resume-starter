@@ -1,3 +1,3 @@
-export * from './interfaces';
-export * from './Layout';
+export type * from './interfaces';
 export type * from './settings.preset';
+export * from './Layout';
