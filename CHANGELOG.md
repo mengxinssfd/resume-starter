@@ -1,3 +1,9 @@
+## [0.2.2](https://github.com/mengxinssfd/resume-starter/compare/v0.2.1...v0.2.2) (2025-11-24)
+
+### Features
+
+- 到岗时间 ([218f8b5](https://github.com/mengxinssfd/resume-starter/commit/218f8b5fc77d59474db8d6c657b2a1cb8efc3031))
+
 ## [0.2.1](https://github.com/mengxinssfd/resume-starter/compare/v0.2.0...v0.2.1) (2024-06-17)
 
 # [0.2.0](https://github.com/mengxinssfd/resume-starter/compare/v0.1.3...v0.2.0) (2024-06-17)
