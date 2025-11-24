@@ -1,3 +1,5 @@
+## [0.2.3](https://github.com/mengxinssfd/resume-starter/compare/v0.2.2...v0.2.3) (2025-11-24)
+
 ## [0.2.2](https://github.com/mengxinssfd/resume-starter/compare/v0.2.1...v0.2.2) (2025-11-24)
 
 ### Features
