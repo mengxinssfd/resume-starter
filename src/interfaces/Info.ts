@@ -31,4 +31,8 @@ export interface Info {
    * 开始工作的日期 或 工作年限，如果是 Date 类型会自动计算工作年限
    */
   workAt: Date | number;
+  /**
+   * 到岗时间
+   */
+  arrival: string;
 }

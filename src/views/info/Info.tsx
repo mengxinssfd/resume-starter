@@ -73,6 +73,7 @@ export const Info: React.FC = (): React.ReactElement => {
               {info.education} / {info.graduatedSchool}
             </li>
             <li>经验: {experience}年</li>
+            <li>{info.arrival}到岗</li>
           </ul>
         </section>
         <section className="contact">

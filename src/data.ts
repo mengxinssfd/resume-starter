@@ -11,6 +11,7 @@ const data: Data = {
     education: '本科',
     graduatedSchool: 'xx大学 · xx专业(2014 - 2018)',
     workAt: new Date(2018, 1),
+    arrival: '一周内',
     // avatar,
   },
   // 联系方式
